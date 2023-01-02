@@ -59,7 +59,7 @@ jobs:
     - stage: Publish-Release
       jdk: openjdk8
       name: Publish-Javadoc
-      install: true
+      install: false
       script:
         - build/setMavenVersion.sh
         - mvn clean javadoc:aggregate $MVN_ARGS
